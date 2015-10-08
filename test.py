@@ -7,6 +7,7 @@ from MU_Mat import *
 from DP_util import *;
 from loadFile import *;
 from MU_STRAT import *;
+from MU_LMM import *;
 from PrivSTRAT import *;
 from pysnptools.snpreader import Bed; 
 
@@ -384,12 +385,94 @@ def test_DP_UTIL():
 	print "Compared results to old PrivSTRAT and seemed consistant";
 
 
+
+
+##
+##Test MU_LMM
+##
+def TestMU_LMM():	
+	print "Test MU_LMM!"
+	testfile1="../../GWAS/cleaned";	
+	[y,sFil]=getData(testfile1);
+
+	mm=MU_LMM(sFil,[1,-1.0]);
+
+	try:
+		mm=MU_LMM(sFil,[1,-1.0]);
+	except:
+		print "Error creating MU_LMM!"
+		return;
+	else:
+		print "Created MU_LMM!"
+
+	if isinstance(mm,MU_Mem):
+		print "Is a MU_Mem";
+	else:
+		print "Is not a MU_Mem!"
+		return;
+
+	#mm=MU_LMM(sFil,[5,-1.0]);
+
+
+	print "Do some sanity checks on MU";
+
+	a=max(np.abs(np.sum(mm.MU,axis=1)))
+
+	b=max(np.sum(np.abs(mm.MU),axis=1))
+
+	if a/b>.001:
+		print "Error with MU!"
+
+	"""
+	for l in range(0,20):
+		X=[[rand.uniform(-1,1) for i in range(0,50)] for j in range(0,100)]	
+		
+		sm=[sum(x)/50.0 for x in X]
+
+		X=[[a-sm[i] for a in X[i]] for i in range(0,100)];
+		X=np.asarray(X).T;
+		mm.X=X;
+		mm.calcMU(k);
+		MU=mm.MU;
+		Uk=mm.Uk;
+
+		if max([abs(sum(mu)) for mu in MU])>.001:
+			print "Error in calculating MU!"
+			return;
+	
+		dt=np.dot(MU,Uk);
+		if np.max(dt)>.001:
+			print "Error in calculating MU!"
+			return;
+		if abs(max([sum([i**2 for i in mu]) for mu in MU])-1)>.001:
+			print "Error in calculating MU!"
+			return;	
+
+		for i in range(0,100):
+			x=[X[j][i] for j in range(0,50)];
+			mu=MU[i]
+			val=np.dot(x,mu);
+			[bot,some]=mm.normY(x);	
+			if abs(bot-val)>.001:
+				print "Error in MU!"
+				print bot;
+				print val;
+				return;	
+	print "MU seems ok!"
+	"""
+		
+	print "So MU_LMM seems ok!!"
+
+
+
+
 	
 
 if __name__=="__main__":
 	print "Let's get down to business!";
-	testloadfile();
+	#testloadfile();
 	#testMUMAT()
-	TestMU_STRAT();
+	#TestMU_STRAT();
+	TestMU_LMM();
 	#test_DP_UTIL();
 

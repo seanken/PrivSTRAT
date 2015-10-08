@@ -21,8 +21,18 @@ class MU_Mat:
 	##
 	##Initialize
 	##
-	def __init__(self,BED,par):
+	def __init__(self,BED,par,binSize=1):
 		self.BED=BED;
+		self.binSize=binSize;
+		makeBins();
+
+	##
+	##makes a dictionary mapping SNPs to bins
+	##
+	def makeBins():
+		if self.binSize!=1:
+			print "Binning not yet implemented! Setting binSize=1"
+
 	
 	##
 	##Returns the product of MU with y
@@ -89,7 +99,7 @@ class MU_Mem(MU_Mat):
 	##MU used if already calculated MU
 	##SNPs specified if only looking at certain SNPs
 	##
-	def __init__(self,BED,par):
+	def __init__(self,BED,par,binSize=1):
 		self.BED=BED
 		self.X=BED.read().standardize().val##normalized genotype data
         	self.sensit=-1.0;	
