@@ -5,14 +5,14 @@ from os.path import isfile;
 import pysnptools;
 import sys;
 from loadFile import getData;
-from MU_STRAT import MU_STRAT;
+from MU_STRAT import MU_LMM;
 import PrivGWAS;
 
 ##
 ##The user interface!
 ##
 def Interface(args=[]):
-	print "Hello, and welcome to PrivSTRAT!"
+	print "Hello, and welcome to PrivLMM!"
 	print "Checking dependencies, one moment..."
 	try:
 		import pysnptools;
@@ -29,17 +29,14 @@ def Interface(args=[]):
 	except ImportError, e:
 		print "Sorry, you need scipy installed to run this program."
 		return;
-	try:
-		import sklearn;
-	except ImportError, e:
-		print "Sorry, you need scikit learn installed to run this program."
-		return;
 	epsilon=1.0;
 	mret=3;
 	pval=.05;
 	snpsToEst=[];
 	bedFil="";
-	k=5;
+	num=10;
+	se2=.5;
+	sg2=.5
 	typ="Count";##Number count, return SNPs, estimate statistic
 	algor="noise";
     	savename="";
@@ -56,8 +53,12 @@ def Interface(args=[]):
 					i=i+1;
 					if i>len(args)-1:
 						print "Sorry, incorrect argument!"
-					if a=="-k":
-						k=int(args[i]);
+					if a=="-se2":
+						se2=float(args[i]);
+					if a=="-sg2":
+						sg2=float(args[i])
+					if a=="-num":
+						num=int(args[i])
 					if a=="-e":
 						epsilon=float(args[i]);
 					if a=="-p":
@@ -106,7 +107,12 @@ def Interface(args=[]):
 		if len(snps)==0:
 			print "No SNPs provided!"
 			return;
-
+	if typ=="Herit":
+		if num<1:
+			print "num must be > 0":
+			return;
+		se2=-1.0;
+		sg2=-1.0
 	
 	print "As it stands: "
 	print "BedFile: "+bedFil;
@@ -125,7 +131,7 @@ def Interface(args=[]):
     	[y,BED]=getData(bedFil);
 
 	print "Calculating MU matrix"
-	MU=MU_STRAT(BED,k);
+	MU=MU_LMM(BED,[num,epsilon],se2=se2,sg2=sg2);
 
    	if typ=="Top":
         	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename);
@@ -133,8 +139,14 @@ def Interface(args=[]):
         	PrivGWAS.count(MU,y,epsilon,pval,savename);
 	elif typ=="Wald":
         	PrivGWAS.wald(MU,y,epsilon,snps,savename);
-
-
+	elif typ=="Herit":
+		print "The estimated heritability:"
+		print "Sigma_e^2 is "+str(MU.se2);
+		print "Sigma_e^2 is "+str(MU.se2);
+		print "Good bye!"
+	else:
+		print "Specified task "+typ+" not recognized."
+		print "Good bye!"
 
 
 
