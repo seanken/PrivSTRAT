@@ -1,0 +1,2278 @@
+Traceback (most recent call last):
+  File "SimpleFig.py", line 8, in <module>
+    import DPEigen as dpe;
+ImportError: No module named DPEigen
+load Data
+calc MU!
+get True!
+0.408235009556
+0.5
+0
+Calculating Distance
+Yay!
+1
+Calculating Distance
+Yay!
+2
+Calculating Distance
+Yay!
+3
+Calculating Distance
+Yay!
+4
+Calculating Distance
+Yay!
+5
+Calculating Distance
+Yay!
+6
+Calculating Distance
+Yay!
+7
+Calculating Distance
+Yay!
+8
+Calculating Distance
+Yay!
+9
+Calculating Distance
+Yay!
+10
+Calculating Distance
+Yay!
+11
+Calculating Distance
+Yay!
+12
+Calculating Distance
+Yay!
+13
+Calculating Distance
+Yay!
+14
+Calculating Distance
+Yay!
+15
+Calculating Distance
+Yay!
+16
+Calculating Distance
+Yay!
+17
+Calculating Distance
+Yay!
+18
+Calculating Distance
+Yay!
+19
+Calculating Distance
+Yay!
+20
+Calculating Distance
+Yay!
+21
+Calculating Distance
+Yay!
+22
+Calculating Distance
+Yay!
+23
+Calculating Distance
+Yay!
+24
+Calculating Distance
+Yay!
+25
+Calculating Distance
+Yay!
+26
+Calculating Distance
+Yay!
+27
+Calculating Distance
+Yay!
+28
+Calculating Distance
+Yay!
+29
+Calculating Distance
+Yay!
+30
+Calculating Distance
+Yay!
+31
+Calculating Distance
+Yay!
+32
+Calculating Distance
+Yay!
+33
+Calculating Distance
+Yay!
+34
+Calculating Distance
+Yay!
+35
+Calculating Distance
+Yay!
+36
+Calculating Distance
+Yay!
+37
+Calculating Distance
+Yay!
+38
+Calculating Distance
+Yay!
+39
+Calculating Distance
+Yay!
+40
+Calculating Distance
+Yay!
+41
+Calculating Distance
+Yay!
+42
+Calculating Distance
+Yay!
+43
+Calculating Distance
+Yay!
+44
+Calculating Distance
+Yay!
+45
+Calculating Distance
+Yay!
+46
+Calculating Distance
+Yay!
+47
+Calculating Distance
+Yay!
+48
+Calculating Distance
+Yay!
+49
+Calculating Distance
+Yay!
+50
+Calculating Distance
+Yay!
+51
+Calculating Distance
+Yay!
+52
+Calculating Distance
+Yay!
+53
+Calculating Distance
+Yay!
+54
+Calculating Distance
+Yay!
+55
+Calculating Distance
+Yay!
+56
+Calculating Distance
+Yay!
+57
+Calculating Distance
+Yay!
+58
+Calculating Distance
+Yay!
+59
+Calculating Distance
+Yay!
+60
+Calculating Distance
+Yay!
+61
+Calculating Distance
+Yay!
+62
+Calculating Distance
+Yay!
+63
+Calculating Distance
+Yay!
+64
+Calculating Distance
+Yay!
+65
+Calculating Distance
+Yay!
+66
+Calculating Distance
+Yay!
+67
+Calculating Distance
+Yay!
+68
+Calculating Distance
+Yay!
+69
+Calculating Distance
+Yay!
+70
+Calculating Distance
+Yay!
+71
+Calculating Distance
+Yay!
+72
+Calculating Distance
+Yay!
+73
+Calculating Distance
+Yay!
+74
+Calculating Distance
+Yay!
+75
+Calculating Distance
+Yay!
+76
+Calculating Distance
+Yay!
+77
+Calculating Distance
+Yay!
+78
+Calculating Distance
+Yay!
+79
+Calculating Distance
+Yay!
+80
+Calculating Distance
+Yay!
+81
+Calculating Distance
+Yay!
+82
+Calculating Distance
+Yay!
+83
+Calculating Distance
+Yay!
+84
+Calculating Distance
+Yay!
+85
+Calculating Distance
+Yay!
+86
+Calculating Distance
+Yay!
+87
+Calculating Distance
+Yay!
+88
+Calculating Distance
+Yay!
+89
+Calculating Distance
+Yay!
+90
+Calculating Distance
+Yay!
+91
+Calculating Distance
+Yay!
+92
+Calculating Distance
+Yay!
+93
+Calculating Distance
+Yay!
+94
+Calculating Distance
+Yay!
+95
+Calculating Distance
+Yay!
+96
+Calculating Distance
+Yay!
+97
+Calculating Distance
+Yay!
+98
+Calculating Distance
+Yay!
+99
+Calculating Distance
+Yay!
+1.0
+0
+Calculating Distance
+Yay!
+1
+Calculating Distance
+Yay!
+2
+Calculating Distance
+Yay!
+3
+Calculating Distance
+Yay!
+4
+Calculating Distance
+Yay!
+5
+Calculating Distance
+Yay!
+6
+Calculating Distance
+Yay!
+7
+Calculating Distance
+Yay!
+8
+Calculating Distance
+Yay!
+9
+Calculating Distance
+Yay!
+10
+Calculating Distance
+Yay!
+11
+Calculating Distance
+Yay!
+12
+Calculating Distance
+Yay!
+13
+Calculating Distance
+Yay!
+14
+Calculating Distance
+Yay!
+15
+Calculating Distance
+Yay!
+16
+Calculating Distance
+Yay!
+17
+Calculating Distance
+Yay!
+18
+Calculating Distance
+Yay!
+19
+Calculating Distance
+Yay!
+20
+Calculating Distance
+Yay!
+21
+Calculating Distance
+Yay!
+22
+Calculating Distance
+Yay!
+23
+Calculating Distance
+Yay!
+24
+Calculating Distance
+Yay!
+25
+Calculating Distance
+Yay!
+26
+Calculating Distance
+Yay!
+27
+Calculating Distance
+Yay!
+28
+Calculating Distance
+Yay!
+29
+Calculating Distance
+Yay!
+30
+Calculating Distance
+Yay!
+31
+Calculating Distance
+Yay!
+32
+Calculating Distance
+Yay!
+33
+Calculating Distance
+Yay!
+34
+Calculating Distance
+Yay!
+35
+Calculating Distance
+Yay!
+36
+Calculating Distance
+Yay!
+37
+Calculating Distance
+Yay!
+38
+Calculating Distance
+Yay!
+39
+Calculating Distance
+Yay!
+40
+CTraceback (most recent call last):
+  File "WaldFig.py", line 42, in <module>
+    waldFig(filename,eps,savename,k=5);
+NameError: name 'waldFig' is not defined
+alculating Distance
+Yay!
+41
+Calculating Distance
+Yay!
+42
+Calculating Distance
+Yay!
+43
+Calculating Distance
+Yay!
+44
+Calculating Distance
+Yay!
+45
+Calculating Distance
+Yay!
+46
+Calculating Distance
+Yay!
+47
+Calculating Distance
+Yay!
+48
+Calculating Distance
+Yay!
+49
+Calculating Distance
+Yay!
+50
+Calculating Distance
+Yay!
+51
+Calculating Distance
+Yay!
+52
+Calculating Distance
+Yay!
+53
+Calculating Distance
+Yay!
+54
+Calculating Distance
+Yay!
+55
+Calculating Distance
+Yay!
+56
+Calculating Distance
+Yay!
+57
+Calculating Distance
+Yay!
+58
+Calculating Distance
+Yay!
+59
+Calculating Distance
+Yay!
+60
+Calculating Distance
+Yay!
+61
+Calculating Distance
+Yay!
+62
+Calculating Distance
+Yay!
+63
+Calculating Distance
+Yay!
+64
+Calculating Distance
+Yay!
+65
+Calculating Distance
+Yay!
+66
+Calculating Distance
+Yay!
+67
+Calculating Distance
+Yay!
+68
+Calculating Distance
+Yay!
+69
+Calculating Distance
+Yay!
+70
+Calculating Distance
+Yay!
+71
+Calculating Distance
+Yay!
+72
+Calculating Distance
+Yay!
+73
+Calculating Distance
+Yay!
+74
+Calculating Distance
+Yay!
+75
+Calculating Distance
+Yay!
+76
+Calculating Distance
+Yay!
+77
+Calculating Distance
+Yay!
+78
+Calculating Distance
+Yay!
+79
+Calculating Distance
+Yay!
+80
+Calculating Distance
+Yay!
+81
+Calculating Distance
+Yay!
+82
+Calculating Distance
+Yay!
+83
+Calculating Distance
+Yay!
+84
+Calculating Distance
+Yay!
+85
+Calculating Distance
+Yay!
+86
+Calculating Distance
+Yay!
+87
+Calculating Distance
+Yay!
+88
+Calculating Distance
+Yay!
+89
+Calculating Distance
+Yay!
+90
+Calculating Distance
+Yay!
+91
+Calculating Distance
+Yay!
+92
+Calculating Distance
+Yay!
+93
+Calculating Distance
+Yay!
+94
+Calculating Distance
+Yay!
+95
+Calculating Distance
+Yay!
+96
+Calculating Distance
+Yay!
+97
+Calculating Distance
+Yay!
+98
+Calculating Distance
+Yay!
+99
+Calculating Distance
+Yay!
+1.5
+0
+Calculating Distance
+Yay!
+1
+Calculating Distance
+Yay!
+2
+Calculating Distance
+Yay!
+3
+Calculating Distance
+Yay!
+4
+Calculating Distance
+Yay!
+5
+Calculating Distance
+Yay!
+6
+Calculating Distance
+Yay!
+7
+Calculating Distance
+Yay!
+8
+Calculating Distance
+Yay!
+9
+Calculating Distance
+Yay!
+10
+Calculating Distance
+Yay!
+11
+Calculating Distance
+Yay!
+12
+Calculating Distance
+Yay!
+13
+Calculating Distance
+Yay!
+14
+Calculating Distance
+Yay!
+15
+Calculating Distance
+Yay!
+16
+Calculating Distance
+Yay!
+17
+Calculating Distance
+Yay!
+18
+Calculating Distance
+Yay!
+19
+Calculating Distance
+Yay!
+20
+Calculating Distance
+Yay!
+21
+Calculating Distance
+Yay!
+22
+Calculating Distance
+Yay!
+23
+Calculating Distance
+Yay!
+24
+Calculating Distance
+Yay!
+25
+Calculating Distance
+Yay!
+26
+Calculating Distance
+Yay!
+27
+Calculating Distance
+Yay!
+28
+Calculating Distance
+Yay!
+29
+Calculating Distance
+Yay!
+30
+Calculating Distance
+Yay!
+31
+Calculating Distance
+Yay!
+32
+Calculating Distance
+Yay!
+33
+Calculating Distance
+Yay!
+34
+Calculating Distance
+Yay!
+35
+Calculating Distance
+Yay!
+36
+Calculating Distance
+Yay!
+37
+Calculating Distance
+Yay!
+38
+Calculating Distance
+Yay!
+39
+Calculating Distance
+Yay!
+40
+Calculating Distance
+Yay!
+41
+Calculating Distance
+Yay!
+42
+Calculating Distance
+Yay!
+43
+Calculating Distance
+Yay!
+44
+Calculating Distance
+Yay!
+45
+Calculating Distance
+Yay!
+46
+Calculating Distance
+Yay!
+47
+Calculating Distance
+Yay!
+48
+Calculating Distance
+Yay!
+49
+Calculating Distance
+Yay!
+50
+Calculating Distance
+Yay!
+51
+Calculating Distance
+Yay!
+52
+Calculating Distance
+Yay!
+53
+Calculating Distance
+Yay!
+54
+Calculating Distance
+Yay!
+55
+Calculating Distance
+Yay!
+56
+Calculating Distance
+Yay!
+57
+Calculating Distance
+Yay!
+58
+Calculating Distance
+Yay!
+59
+Calculating Distance
+Yay!
+60
+Calculating Distance
+Yay!
+61
+Calculating Distance
+Yay!
+62
+Calculating Distance
+Yay!
+63
+Calculating Distance
+Yay!
+64
+Calculating Distance
+Yay!
+65
+Calculating Distance
+Yay!
+66
+Calculating Distance
+Yay!
+67
+Calculating Distance
+Yay!
+68
+Calculating Distance
+Yay!
+69
+Calculating Distance
+Yay!
+70
+Calculating Distance
+Yay!
+71
+Calculating Distance
+Yay!
+72
+Calculating Distance
+Yay!
+73
+Calculating Distance
+Yay!
+74
+Calculating Distance
+Yay!
+75
+Calculating Distance
+Yay!
+76
+Calculating Distance
+Yay!
+77
+Calculating Distance
+Yay!
+78
+Calculating Distance
+Yay!
+79
+Calculating Distance
+Yay!
+80
+Calculating Distance
+Yay!
+81
+Calculating Diload Data
+calc MU!
+get True!
+0.406348285603
+0.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+1.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+1.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+2.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+2.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+3.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+3.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+4.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+4.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+5.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+load Data
+calc MU!
+get True!
+0.672788681343
+0.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+1.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+1.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+2.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+2.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+3.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+3.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+4.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+4.5
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+5.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+load Data
+calc MU!
+get True!
+1.32141184657
+3.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+6.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+9.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+12.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+15.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+18.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+21.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+24.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+27.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+30.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+load Data
+calc MU!
+get True!
+1.96932069343
+3.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+6.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+9.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+12.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculating Distance
+4
+Calculating Distance
+5
+Calculating Distance
+6
+Calculating Distance
+7
+Calculating Distance
+8
+Calculating Distance
+9
+Calculating Distance
+10
+Calculating Distance
+11
+Calculating Distance
+12
+Calculating Distance
+13
+Calculating Distance
+14
+Calculating Distance
+15
+Calculating Distance
+16
+Calculating Distance
+17
+Calculating Distance
+18
+Calculating Distance
+19
+Calculating Distance
+15.0
+0
+Calculating Distance
+1
+Calculating Distance
+2
+Calculating Distance
+3
+Calculatin

@@ -1,0 +1,11 @@
+load Data
+calc MU!
+get True!
+Traceback (most recent call last):
+  File "WaldFig.py", line 42, in <module>
+    plotWald(eps,filename,savename,k=5);
+  File "WaldFig.py", line 22, in plotWald
+    tru=wt(y,MU,-1,snps=[],forFigs=False);
+  File "/mnt/work/seanken/Nice_DP_Pop/PrivSTRAT/DP_util.py", line 151, in WaldTest
+    [nm,sen]=MU.normY(self,y);
+NameError: global name 'self' is not defined
