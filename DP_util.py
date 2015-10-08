@@ -186,13 +186,19 @@ def WaldTest(y,MU,epsilon,snps,forFigs=False):
 def estNum(MU,y,pval,epsilon):
     bnd_sc=math.sqrt(chi2.ppf((1.0-pval),df=1));
 
-    [nm,sen]=MU.normY(self,y);
+    ret=MU.normY(y);
+    nm=ret[0];
+    sen=ret[1];
 
 
+    n=len(y);
     if sen>0:
         bnd_est=bnd_sc*abs(nm+Lap(0.0,2.0*sen/epsilon));
+	if MU.k>0:
+		bnd_est=bnd_est/math.sqrt(n-MU.k-1);
     else:
         bnd_est=bnd_sc*nm;
+
     
     neigh=MU.neighDist(y,bnd_est);
     m=len(neigh);
@@ -201,9 +207,9 @@ def estNum(MU,y,pval,epsilon):
     sc=[0.0 for i in range(0,m+1)];
     for i in range(0,m):
         if neigh[i]>0:
-            sc[i]=-.5*epsilon*neigh[i]/2.0;
+            sc[i]=-epsilon*neigh[i]/4.0;
         else:
-            sc[i]=.5*epsilon*(neigh[i]-1)/2.0;
+            sc[i]=epsilon*(neigh[i]-1)/4.0;
     for i in range(0,m+1):
         sc[i]=math.exp(sc[i]);
     sm=sum(sc);

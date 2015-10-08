@@ -22,20 +22,25 @@ class MU_LMM(MU_Mem):
 	##
 	##Implementation of calc MU matrix for PrivLMM
 	##
-	def calcMU(self,par=[],se2=-1.0,sg2=-1.0):
-        if se2<0:
-            num=par[0];
-            epsilon=par[1];
-            if len(par)>2:
-                self.VarCalc=par[3];
-            else:
-                self.VarCalc=FastLMM();
-            n=len(self.X);
-            m=len(self.X[0])
-            print "Calculate variance"
-            [se2,sg2]=self.estVar(num,epsilon)
+	def calcMU(self,par=[]):
+		se2=-1;
+		sg2=-1;
+		if isinstance(par,tuple):
+			se2=float(par[0]);
+			sg2=float(par[1])
+		if se2<0:
+           		num=par[0];
+            		epsilon=par[1];
+           		if len(par)>2:
+                		self.VarCalc=par[3];
+            		else:
+                		self.VarCalc=FastLMM();
+            		print "Calculate variance"
+            		[se2,sg2]=self.estVar(num,epsilon)
 		self.se2=se2;
 		self.sg2=sg2;
+            	n=len(self.X);
+            	m=len(self.X[0])
 		print "Taking inverse!"
 		Kinv=inv(np.eye(n)*se2+sg2/float(m)*np.dot(self.X,(self.X).T))
    		print "Calc Top"

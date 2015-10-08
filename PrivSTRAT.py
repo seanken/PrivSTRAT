@@ -37,10 +37,10 @@ def Interface(args=[]):
 	epsilon=1.0;
 	mret=3;
 	pval=.05;
-	snpsToEst=[];
+	snps=[];
 	bedFil="";
 	k=5;
-	typ="Count";##Number count, return SNPs, estimate statistic
+	typ="Top";##Number count, return SNPs, estimate statistic
 	algor="noise";
     	savename="";
 
@@ -68,7 +68,6 @@ def Interface(args=[]):
 						typ="Top"	
 					if a=="-s":
 						snps=[];
-						typ="Score"
 						while i<len(args) and args[i][0]!="-":
 							snps.append(args[i]);
 							i=i+1;

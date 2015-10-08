@@ -5,7 +5,7 @@ from os.path import isfile;
 import pysnptools;
 import sys;
 from loadFile import getData;
-from MU_STRAT import MU_LMM;
+from MU_LMM import MU_LMM;
 import PrivGWAS;
 
 ##
@@ -34,10 +34,10 @@ def Interface(args=[]):
 	pval=.05;
 	snpsToEst=[];
 	bedFil="";
-	num=10;
+	num=0;
 	se2=.5;
-	sg2=.5
-	typ="Count";##Number count, return SNPs, estimate statistic
+	sg2=.5;
+	typ="Top";##Number count, return SNPs, estimate statistic
 	algor="noise";
     	savename="";
 
@@ -69,7 +69,7 @@ def Interface(args=[]):
 						typ="Top"	
 					if a=="-s":
 						snps=[];
-						typ="Score"
+						typ="Wald"
 						while i<len(args) and args[i][0]!="-":
 							snps.append(args[i]);
 							i=i+1;
@@ -109,7 +109,7 @@ def Interface(args=[]):
 			return;
 	if typ=="Herit":
 		if num<1:
-			print "num must be > 0":
+			print "num must be > 0";
 			return;
 		se2=-1.0;
 		sg2=-1.0
@@ -131,9 +131,11 @@ def Interface(args=[]):
     	[y,BED]=getData(bedFil);
 
 	print "Calculating MU matrix"
-	MU=MU_LMM(BED,[num,epsilon],se2=se2,sg2=sg2);
-
-   	if typ=="Top":
+	if num<1:
+		MU=MU_LMM(BED,(se2,sg2));
+	else:	
+		MU=MU_LMM(BED,[num,epsilon]);
+	if typ=="Top":
         	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename);
    	elif typ=="Count":
         	PrivGWAS.count(MU,y,epsilon,pval,savename);
@@ -142,7 +144,7 @@ def Interface(args=[]):
 	elif typ=="Herit":
 		print "The estimated heritability:"
 		print "Sigma_e^2 is "+str(MU.se2);
-		print "Sigma_e^2 is "+str(MU.se2);
+		print "Sigma_g^2 is "+str(MU.sg2);
 		print "Good bye!"
 	else:
 		print "Specified task "+typ+" not recognized."

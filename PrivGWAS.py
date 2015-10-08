@@ -14,7 +14,7 @@ def Top(MU,y,epsilon,mret,algor,savename):
     print "Choosing Top SNPS!"
     topSNPs=PickTop(y,MU,mret,epsilon,algor)
 
-    print "The top "+m_ret+" SNPs are estimated to be...";
+    print "The top "+str(mret)+" SNPs are estimated to be...";
     for s in topSNPs:
         print s;
     
@@ -34,7 +34,7 @@ def Top(MU,y,epsilon,mret,algor,savename):
 def count(MU,y,epsilon,pval,savename):
     print "Counting SNPs!"
     
-    num=estNUM(MU,y,pval,epsilon);
+    num=estNum(MU,y,pval,epsilon);
 
     print "The estimated number of significant SNPs is: "+str(num);
     print "\nGood Bye!"
@@ -59,9 +59,6 @@ def wald(MU,y,epsilon,snps,savename):
         fil.close();
         print "SAVED!";
     print "\nGood Bye!"
-
-
-
 
 ##
 ##The user interface!
@@ -209,17 +206,9 @@ def Interface(args=[]):
 			print snps[i]+": "+str(Scores[i]);
 	elif typ=="Count":
 		print "Start counting algorithm!"
-		nm=DP.estNum(y,X,epsilon,k=k,se2=se2,sg2=sg2,MU=MU,pval=pval,meth=meth);
+		nm=DP.estNum(MU,y,X,epsilon,k=k,se2=se2,sg2=sg2,MU=MU,pval=pval,meth=meth);
 		print "There are about "+str(nm)+" SNPS with p-values less then "+str(pval); 
-	elif typ=="Herit":
-		print "Estimate Var y";
-		vy=estVarY(y,.1*epsilon);
-		print "Estimate Heritability"
-		herit=estHerit(bedFil,num=5,epsilon=.9*epsilon);
-		print "Estimated heritability is: "+str(herit);
-		print "Estimated genetic variance: "+str(herit*vy);
-		print "Estimated environmental variance: "+str(vy*(1.0-herit))
-
+	
 	else:
 		print "Not a correct type of query!"
 		return;
