@@ -68,10 +68,9 @@ def plotTop(mret,eps,filename,savename=""):
 
 if __name__=="__main__":
 	filename="../../GWAS/cleaned";
-	eps={};
 	eps=[.5,.5,3.0,3.0];
 	mret=[3,5,10,15];
-	savename="OutputDir/LMM_Top";
+	savename="OutputDir/LMM_Corrected_Top";
 	for i in range(0,4):
 		plotTop(mret[i],eps[i],filename,savename=savename+str(mret[i])+".txt");
 	print "DONE!!"

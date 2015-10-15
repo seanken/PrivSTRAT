@@ -23,15 +23,17 @@ class MU_Mat:
 	##
 	def __init__(self,BED,par,binSize=1):
 		self.BED=BED;
+		self.makeBins();
+	
+	def makeBins(self,binSize=1):
 		self.binSize=binSize;
-		makeBins();
-
-	##
-	##makes a dictionary mapping SNPs to bins
-	##
-	def makeBins():
-		if self.binSize!=1:
-			print "Binning not yet implemented! Setting binSize=1"
+		self.Pos=self.BED.pos[:,0:3:2]
+		self.Pos=[[p[0],int(p[1]/binSize)] for p in self.Pos];
+		if binSize>1:
+			I=sorted([i for i in range(0,self.BED.sid_count)],key=lambda i:self.Pos[i])
+			self.BED=self.BED[:,I];		
+			self.Pos=sorted(self.Pos);
+	
 
 	
 	##
@@ -79,9 +81,10 @@ class MU_Mat:
     	##
     	##Get the names of SNPs at specified indices
     	##
-    	def snp_Names(self,ind):
-        	return [self.BED.sid[i] for i in ind];
-
+    	def snp_Names(self,ind,binned=False):
+		if binned:
+			return [self.Pos[i] for i in ind]
+	     	return [self.BED.sid[i] for i in ind];
 
     	##
     	##Gets indices of SNPs with specified names
@@ -101,6 +104,8 @@ class MU_Mem(MU_Mat):
 	##
 	def __init__(self,BED,par,binSize=1):
 		self.BED=BED
+		self.makeBins(binSize);	
+
 		self.X=BED.read().standardize().val##normalized genotype data
         	self.sensit=-1.0;	
 		self.MUn=[];
@@ -174,14 +179,13 @@ class MU_Mem(MU_Mat):
 	##(See manuscript for details)
 	##
 	def sens(self,mret):
-		if self.sensit>0:
-			return self.sensit;
+		#if self.sensit>0:
+		#	return self.sensit;
 		MU2=np.absolute((self.MU).T)				
 		MU2=np.sort(-MU2)[:,:mret];
 		sens=min(np.sum(MU2,axis=1));
 		sens=-sens;
 		self.sensit=sens;
-		print sens;
 		return sens;
 	
 

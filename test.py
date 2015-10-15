@@ -321,7 +321,7 @@ def TestMU_STRAT():
 		mm.calcMU(k);
 		for l in range(0,20):
 			y=[rand.uniform(0,1) for i in range(0,10)];
-			[bot,val]=mm.normY(y);
+			[bot,val,c]=mm.normY(y);
 			mn=sum(y)/float(len(y));
 			y=[i-mn for i in y];
 			y=y[k:];
@@ -364,7 +364,7 @@ def TestMU_STRAT():
 			x=[X[j][i] for j in range(0,50)];
 			mu=MU[i]
 			val=np.dot(x,mu);
-			[bot,some]=mm.normY(x);	
+			[bot,some,c]=mm.normY(x);	
 			if abs(bot-val)>.001:
 				print "Error in MU!"
 				print bot;
@@ -471,8 +471,8 @@ def TestMU_LMM():
 if __name__=="__main__":
 	print "Let's get down to business!";
 	#testloadfile();
-	#testMUMAT()
-	#TestMU_STRAT();
-	TestMU_LMM();
-	#test_DP_UTIL();
+	testMUMAT()
+	TestMU_STRAT();
+	#TestMU_LMM();
+	test_DP_UTIL();
 

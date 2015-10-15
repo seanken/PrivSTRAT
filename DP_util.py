@@ -19,7 +19,7 @@ from numpy.random import laplace as Lap;
 ##0 to len(sc)-1, inclusive
 ##Picks i with prob prop to exp(-sc[i])
 ##
-def expPick(sc,mret):
+def expPick(sc,mret,Pos=[]):
     m=len(sc);
     fnd=[0 for i in range(0,mret)]
     scores=[s for s in sc]
@@ -38,7 +38,19 @@ def expPick(sc,mret):
         k=min([k for k in range(0,m) if mlt[k]>0]);
                 
         fnd[i]=k;
+		
+
         scores[k]=-float("inf");
+
+	if len(Pos)>0:
+		j=1;
+		while j+k<len(Pos) and Pos[j+k]==Pos[j]:
+			scores[j+k]=-float("inf");
+			j=j+1;
+		j=1;
+		while k-j>0 and Pos[k-j]==Pos[j]:
+			scores[k-j]=-float("inf");
+			j=j+1;
     return fnd;
 
 
@@ -49,7 +61,7 @@ def expPick(sc,mret):
 ##different bnds, so saves some calculations to speed it up
 ##(mostly for making figures faster)
 ##
-def PickTopNeigh(y,MU,mret,epsilon,reuse=False):
+def PickTopNeigh(y,MU,mret,epsilon,reuse=False,binned=False):
     n=len(y);
  
     ep1=.1*epsilon;
@@ -68,14 +80,17 @@ def PickTopNeigh(y,MU,mret,epsilon,reuse=False):
     
     sc=[nei*ep2/(2.0*mret) for nei in neighDist];
         
-    index_Ret=expPick(sc,mret);
+    if binned:
+	index_Ret=expPick(sc,mret,Pos=MU.Pos);
+    else: 
+	index_Ret=expPick(sc,mret);
 
-    return MU.snp_Names(index_Ret);
+    return MU.snp_Names(index_Ret,binned=binned);
 
 ##
 ##Picks top scoring SNPs using Score method
 ##
-def PickTopScore(y,MU,mret,epsilon):
+def PickTopScore(y,MU,mret,epsilon,binned=False):
     n=len(y);
     sc=MU.prod(y);
     sc=[abs(s) for s in sc]
@@ -85,15 +100,17 @@ def PickTopScore(y,MU,mret,epsilon):
     sc=[s-ms for s in sc];
         
     sc2=[s*epsilon/(2.0*sens) for s in sc];
-        
-    index_Ret=expPick(sc2,mret);
+    if binned:
+	index_Ret=expPick(sc2,mret,Pos=MU.Pos);
+    else: 
+	index_Ret=expPick(sc2,mret);
 
-    return MU.snp_Names(index_Ret);
+    return MU.snp_Names(index_Ret,binned=binned);
 
 ##
 ##Picks top scoring SNPs using Laplacian method
 ##
-def PickTopNoise(y,MU,mret,epsilon):
+def PickTopNoise(y,MU,mret,epsilon,binned=False):
     n=len(y);
     sc=MU.prod(y);
     sc=[abs(s) for s in sc]
@@ -104,10 +121,23 @@ def PickTopNoise(y,MU,mret,epsilon):
 	scDP=sc;
     else:       
     	scDP=[s+Lap(0,2*sens/epsilon) for s in sc];
-        
-    index_Ret=sorted([i for i in range(0,m)],key=lambda i:-scDP[i])[:mret];
+    if not binned:    
+    	index_Ret=sorted([i for i in range(0,m)],key=lambda i:-scDP[i])[:mret];
+	return MU.snp_Names(index_Ret,binned=binned);
+    I=sorted([i for i in range(0,m)],key=lambda i:-scDP[i]);
 
-    return MU.snp_Names(index_Ret);
+    index_Ret=[];
+    ret_Pos=[];
+    i=0;
+    while len(index_Ret)<mret:
+    	if MU.Pos[I[i]] in ret_Pos:
+	    i=i+1;
+	    continue;
+	ret_Pos.append(MU.Pos[I[i]]);
+	index_Ret.append(I[i]);
+	i=i+1;    
+
+    return MU.snp_Names(index_Ret,binned=binned);
 
 
 
@@ -116,13 +146,13 @@ def PickTopNoise(y,MU,mret,epsilon):
 ##The interface for the outside world
 ##algor can be either noise, score or neighbor
 ##
-def PickTop(y,MU,mret,epsilon,algor="noise",reuse=False):
+def PickTop(y,MU,mret,epsilon,binned=False,algor="noise",reuse=False):
     if algor=="noise":
-        return PickTopNoise(y,MU,mret,epsilon);
+        return PickTopNoise(y,MU,mret,epsilon,binned=binned);
     elif algor=="neighbor":
-        return PickTopNeigh(y,MU,mret,epsilon,reuse=reuse);
+        return PickTopNeigh(y,MU,mret,epsilon,reuse=reuse,binned=binned);
     elif algor=="score":
-        return PickTopScore(y,MU,mret,epsilon);
+        return PickTopScore(y,MU,mret,epsilon,binned=binned);
     else:
         raise ValueError("The algorithm "+algor+" is not recognized as a valid choice.");
 

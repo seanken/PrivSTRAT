@@ -32,7 +32,7 @@ class MU_LMM(MU_Mem):
            		num=par[0];
             		epsilon=par[1];
            		if len(par)>2:
-                		self.VarCalc=par[3];
+                		self.VarCalc=par[2];
             		else:
                 		self.VarCalc=FastLMM();
             		print "Calculate variance"
@@ -46,12 +46,14 @@ class MU_LMM(MU_Mem):
    		print "Calc Top"
 		self.MU=np.dot(self.X.T,Kinv);
 		print "Calc Bottom"
-		bot=np.asarray([np.dot(self.X[:,i],self.MU[i]) for i in range(0,m)])
+		bot=np.asarray([math.sqrt(np.dot(self.X[:,i],self.MU[i])) for i in range(0,m)])
 		print "Divide through!!"
 		self.MU=self.MU/bot[:,np.newaxis]
 		print "Center!"
 		mn=np.mean(self.MU,axis=1);
 		print len(mn); 
+		print np.sum(Kinv);
+		#self.MU=np.dot(self.MU,(np.eye(n)-np.ones((n,n)))/np.sum(Kinv)  );
 		self.MU=self.MU-mn[:,np.newaxis];
 		print "Done!";
 
@@ -119,7 +121,7 @@ class MU_LMM(MU_Mem):
 		sg2=sum([v[0] for v in varEsts])/float(num)+Lap(0.0,vary/(e3*float(num)));
 
 		if sg2<0:
-			sg2=0;
+			sg2=.01*vary;
 		if sg2>vary:
 			sg2=vary;
 
@@ -149,7 +151,13 @@ class FastLMM():
 		lmmg.setG(X/math.sqrt(m))
 		lmmg.sety(y);
 		lmmg.setX(np.ones([n,1]))
-		dct=lmmg.findH2();
+		try:
+			dct=lmmg.findH2();
+		except:
+			dct={};
+			dct['h2']=.5;
+			mn=sum(y)/float(n);
+			dct['sigma2']=sum([(i-mn)**2 for i in y])/float(n);
 		h2=dct['h2'];
 		s2=dct['sigma2'];
 		sg2=h2*s2;
