@@ -321,7 +321,7 @@ def TestMU_STRAT():
 		mm.calcMU(k);
 		for l in range(0,20):
 			y=[rand.uniform(0,1) for i in range(0,10)];
-			[bot,val,c]=mm.normY(y);
+			[bot,val]=mm.normY(y);
 			mn=sum(y)/float(len(y));
 			y=[i-mn for i in y];
 			y=y[k:];

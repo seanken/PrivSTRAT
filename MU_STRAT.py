@@ -46,4 +46,4 @@ class MU_STRAT(MU_Mem):
         mn=sum(y)/float(len(y));
         y_st=[i-mn for i in y];
         y_st=np.asarray(y_st)-np.dot(self.Uk,np.dot(self.Uk.T,y_st));
-        return [math.sqrt(sum([i**2 for i in y_st])),math.sqrt(float(n-1)/float(n)),math.sqrt(n-self.k-1)]
+        return [math.sqrt(sum([i**2 for i in y_st])),math.sqrt(float(n-1)/float(n))]
