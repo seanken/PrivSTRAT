@@ -96,7 +96,7 @@ def Interface(args=[]):
 	k=5;
 	typ="Count";##Number count, return SNPs, estimate statistic
 	meth="EigenStrat";
-	algor="laplacian";
+	algor="neighbor";
 	useCov=False
 
 	if len(args)>1:
