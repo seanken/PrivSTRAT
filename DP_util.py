@@ -229,5 +229,44 @@ def estNum(MU,y,pval,epsilon):
 
 
 
+#####
+##CI for wald
+#########
+##
+##
+##
+def interLap(v,sens,p):
+	r=-sens*math.log(1-p);
+	a=v-r;
+	b=v+r;
+	if a<0 and b<=0:
+		return [b**2,a**2];
+	if a>=0 and b>0:
+		return [a**2,b**2];
+	return [0,max(a**2,b**2)];
+
+##
+##Differentially private interval estimate, p% CI
+##
+def CI(y,MU,p,epsilon,snps):
+    I=MU.snp_index(snps);
+    eps=epsilon/float(len(snps));
+    q=math.sqrt(p);
+    sc=MU.prod(y);
+    [nm,sen]=MU.normY(y);
+    mxMU=MU.maxMU();
+    
+
+    eps=.5*eps;
+    botRoot=(nm+Lap(0.0,2.0*sen/epsilon));
+    bot=botRoot**2
+    sc=[sc[i]+Lap(0.0,mxMU[i]/eps) for i in I];
+
+    yInter=interLap(botRoot,2.0*sen/epsilon,q);
+    scInter=[interLap(sc[i],mxMU[I[i]]/eps,q) for i in range(0,len(I))];
+    CIup=[scInter[i][1]/yInter[0] for i in range(0,len(I))]
+    CIdown=[scInter[i][0]/yInter[1] for i in range(0,len(I))]
+    waldEst=[s**2/bot for s in sc];
+    return [CIdown,waldEst,CIup];
 
 
