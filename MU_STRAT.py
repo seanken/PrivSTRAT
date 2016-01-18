@@ -7,15 +7,19 @@ from MU_Mat import MU_Mem;
 from sklearn.decomposition import TruncatedSVD as svdt;
 import math;
 import numpy as np;
+from numpy.linalg import eigh;
 
 class MU_STRAT(MU_Mem):
     ##
     ##Implementation of calc MU matrix for PrivSTRAT
     ##
-    def calcMU(self,k):
+    def calcMU(self,k,exact=False):
         self.k=k
-	uk_temp=svdt(n_components=k);
-        u=np.asarray(uk_temp.fit_transform(self.X));
+		if not exact:
+			uk_temp=svdt(n_components=k);
+			u=np.asarray(uk_temp.fit_transform(self.X));
+		else:
+			u=exactSVD();
         bot=np.sum(u**2,axis=0);
         bot=[math.sqrt(i) for i in bot]
         self.Uk=u/bot;
@@ -28,6 +32,15 @@ class MU_STRAT(MU_Mem):
         sd=[math.sqrt(s) for s in sd];
         self.MU=self.MU/np.asarray(sd)[:,np.newaxis];
     
+
+	##
+	##Calulates an exact PCA
+	##
+	def exactSVD(self):
+		Mat=np.dot(self.X,(self.X).T);
+		[w,v]=eigh(Mat);
+		return np.asarray(v[:,:self.k])
+		
 
     ##
     ##Returns list of scores
