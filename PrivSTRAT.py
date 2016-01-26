@@ -41,7 +41,7 @@ def Interface(args=[]):
 	bedFil="";
 	k=5;
 	typ="Top";##Number count, return SNPs, estimate statistic
-	algor="noise";
+	algor="neighbor";
     	savename="";
 
 
