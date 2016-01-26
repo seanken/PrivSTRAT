@@ -125,13 +125,13 @@ def Interface(args=[]):
 
 	print "Calculating MU matrix"
 	MU=MU_STRAT(BED,k);
-
+	n=len(y);
    	if typ=="Top":
         	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename);
    	elif typ=="Count":
         	PrivGWAS.count(MU,y,epsilon,pval,savename);
 	elif typ=="Wald":
-        	PrivGWAS.wald(MU,y,epsilon,snps,savename);
+        	PrivGWAS.wald(MU,y,epsilon,snps,savename,coeff=float(n-k-1));
 
 
 

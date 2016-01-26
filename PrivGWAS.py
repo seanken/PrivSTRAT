@@ -42,10 +42,10 @@ def count(MU,y,epsilon,pval,savename):
 ##
 ##returns an estimate of the Wald statistic on specified SNPs in an epsilon-DP way
 ##
-def wald(MU,y,epsilon,snps,savename):
+def wald(MU,y,epsilon,snps,savename,coeff=1.0):
     print "Estimating Wald Statistics!"
     
-    chi=WaldTest(y,MU,epsilon,snps);
+    chi=WaldTest(y,MU,epsilon,snps,coeff=coeff);
     
     print "The scores are estimated to be..."
     for i in range(0,len(snps)):

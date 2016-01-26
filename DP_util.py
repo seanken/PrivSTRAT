@@ -137,7 +137,7 @@ def PickTop(y,MU,mret,epsilon,algor="noise",reuse=False):
 ##
 ##Returns the estimate of the wald test for chosen SNPs using Laplacian mechanism
 ##
-def WaldTest(y,MU,epsilon,snps,forFigs=False):
+def WaldTest(y,MU,epsilon,snps,forFigs=False,coeff=1.0):
     if len(snps)==0:
             I=[i for i in range(0,np.shape(MU.MU)[0])]
 	    eps=epsilon
@@ -167,7 +167,7 @@ def WaldTest(y,MU,epsilon,snps,forFigs=False):
 
     if forFigs:
 	return [sc[i]**2/bot[i] for i in range(0,len(sc))]
-    return [s**2/bot for s in sc];
+    return [coeff*sc[i]**2/bot for i in I];
 
 
 
