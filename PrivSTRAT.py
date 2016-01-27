@@ -43,7 +43,7 @@ def Interface(args=[]):
 	typ="Top";##Number count, return SNPs, estimate statistic
 	algor="neighbor";
     	savename="";
-
+	exact=False;
 
 	if len(args)>1:
 		print "\nUnpacking arguments\n\n"
@@ -80,6 +80,8 @@ def Interface(args=[]):
 						algor=args[i];
 					if a=="-t":
 						typ=args[i];
+					if a=="-exact":
+						exact=bool(args[i]);
 				except ValueError:
 					print "Sorry, one of your arguments (the one corresponding to "+a+") is not of the correct type";
 					return;
@@ -95,9 +97,9 @@ def Interface(args=[]):
 		print "Epsilon needs to be at least zero"
 		return;
 
-	if typ=="Count":
-		if pval>1 or pval<0:
-			print "pval must be between 0 and 1"
+	#if typ=="Count":
+	#	if pval>1 or pval<0:
+	#		print "pval must be between 0 and 1"
 	if typ=="Top":
 		if mret<1:
 			print "mret needs to be >0"
@@ -118,13 +120,15 @@ def Interface(args=[]):
 	if typ=="Wald":
 		print "SNPs: "+str(snps);
 	if typ=="Count":
-		print "pvals: "+str(pval);
+		print "threshold: "+str(pval);
 	print "\n\n\n";
 	print "Load Data!"
     	[y,BED]=getData(bedFil);
 
 	print "Calculating MU matrix"
 	MU=MU_STRAT(BED,k);
+	if exact:
+		MU.calcMU(k,exact=True);
 	n=len(y);
    	if typ=="Top":
         	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename);
