@@ -49,7 +49,7 @@ def expPick(sc,mret):
 ##different bnds, so saves some calculations to speed it up
 ##(mostly for making figures faster)
 ##
-def PickTopNeigh(y,MU,mret,epsilon,reuse=False):
+def PickTopNeigh(y,MU,mret,epsilon,reuse=False,snpList=""):
     n=len(y);
  
     ep1=.1*epsilon;
@@ -68,8 +68,19 @@ def PickTopNeigh(y,MU,mret,epsilon,reuse=False):
     
     sc=[nei*ep2/(2.0*mret) for nei in neighDist];
         
-    index_Ret=expPick(sc,mret);
 
+    SNPS=[];
+    if len(snpList)>0:
+        fil=open(snpList)
+        lines=fil.readlines();
+        fil.close();
+        SNPS=[l.strip() for l in lines];
+        I=MU.snp_index(SNPS);
+        sc=[sc[i] for i in I];
+
+    index_Ret=expPick(sc,mret);
+    if len(snpList)>0:
+	return [SNPS[i] for i in index_Ret]
     return MU.snp_Names(index_Ret);
 
 ##
@@ -116,11 +127,11 @@ def PickTopNoise(y,MU,mret,epsilon):
 ##The interface for the outside world
 ##algor can be either noise, score or neighbor
 ##
-def PickTop(y,MU,mret,epsilon,algor="noise",reuse=False):
+def PickTop(y,MU,mret,epsilon,algor="noise",reuse=False,snpList=""):
     if algor=="noise":
         return PickTopNoise(y,MU,mret,epsilon);
     elif algor=="neighbor":
-        return PickTopNeigh(y,MU,mret,epsilon,reuse=reuse);
+        return PickTopNeigh(y,MU,mret,epsilon,reuse=reuse,snpList=snpList);
     elif algor=="score":
         return PickTopScore(y,MU,mret,epsilon);
     else:

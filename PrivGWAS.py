@@ -10,9 +10,9 @@ from DP_util import *;
 ##
 ##Return the mret top scoring SNPs in an epsilon-DP way
 ##
-def Top(MU,y,epsilon,mret,algor,savename):
+def Top(MU,y,epsilon,mret,algor,savename,snpList):
     print "Choosing Top SNPS!"
-    topSNPs=PickTop(y,MU,mret,epsilon,algor)
+    topSNPs=PickTop(y,MU,mret,epsilon,algor,snpList=snpList)
 
     print "The top "+str(mret)+" SNPs are estimated to be...";
     for s in topSNPs:
@@ -190,7 +190,10 @@ def Interface(args=[]):
 	print "Calculating MU matrix"
 	MU=DP.getMU(y,X,Q=Q,se2=se2,sg2=sg2,k=k,meth=meth);	
 	if typ=="Top":
-		picks=DP.PickTopSNP(y,X,mret,epsilon=epsilon,k=k,se2=se2,sg2=sg2,MU=MU,meth=meth,algor=algor)
+		picks=[];
+		if len(snps)>0:	
+			picks=sFil.sid_to_index(snps);#[snps.index(i) for i in snps];
+		picks=DP.PickTopSNP(y,X,mret,epsilon=epsilon,k=k,se2=se2,sg2=sg2,MU=MU,meth=meth,algor=algor,picks=picks)
 		if len(picks)==0:
 			print "Bad argument!"
 			return;

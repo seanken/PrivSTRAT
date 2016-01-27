@@ -44,6 +44,7 @@ def Interface(args=[]):
 	algor="neighbor";
     	savename="";
 	exact=False;
+	snpList="";
 
 	if len(args)>1:
 		print "\nUnpacking arguments\n\n"
@@ -58,6 +59,8 @@ def Interface(args=[]):
 						print "Sorry, incorrect argument!"
 					if a=="-k":
 						k=int(args[i]);
+					if a=="-snpList":
+						snpList=args[i];
 					if a=="-e":
 						epsilon=float(args[i]);
 					if a=="-p":
@@ -121,6 +124,8 @@ def Interface(args=[]):
 		print "SNPs: "+str(snps);
 	if typ=="Count":
 		print "threshold: "+str(pval);
+	if exact:
+		print "Use exact method!"
 	print "\n\n\n";
 	print "Load Data!"
     	[y,BED]=getData(bedFil);
@@ -131,7 +136,7 @@ def Interface(args=[]):
 		MU.calcMU(k,exact=True);
 	n=len(y);
    	if typ=="Top":
-        	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename);
+        	PrivGWAS.Top(MU,y,epsilon,mret,algor,savename,snpList);
    	elif typ=="Count":
         	PrivGWAS.count(MU,y,epsilon,pval,savename);
 	elif typ=="Wald":
